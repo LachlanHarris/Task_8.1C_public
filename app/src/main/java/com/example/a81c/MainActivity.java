@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 String regularExpression = "(?<=watch\\?v=|/videos/|embed\\/|youtu.be\\/|\\/v\\/|\\/e\\/|watch\\?v%3D|watch\\?feature=player_embedded&v=|%2Fvideos%2F|embed%\u200C\u200B2F|youtu.be%2F|%2Fv%2F)[^#\\&\\?\\n]*";
 
                 Pattern fullPattern = Pattern.compile(regularExpression);
-                Matcher matcher = fullPattern.matcher(URL); //url is youtube url for which you want to extract the id.
+                Matcher matcher = fullPattern.matcher(URL);
                 if (matcher.find()) {
                      VidID = matcher.group();
                 }
